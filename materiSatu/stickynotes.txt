@@ -1,0 +1,29 @@
+<h1>JavaScript Output</h1>
+
+JavaScript bisa "Tampilin" data dengan banyak cara
+
+Misalkan :
+    1. Nulis ke elemen dalam HTML menggunakan innerHTML
+    2. Nulis ke output HTML menggunakan document.write()
+    3. Nulis ke alert box menggunakan window.alert()
+    4. Nulis ke console browser menggunakan console.log()
+
+<h1>JavaScript Statement</h1>
+
+    1. Sebuah Statement tidak harus diakhiri dengan semicolon(;) jika
+    hanya 1 line
+
+    2. JS mengabaikan mutiple spaces
+
+    3. Blok program ditulis dalam {} (kurung kurawal)
+
+    4. jika ingin menulis statement dalam 2 baris maka penggal setelah operator
+
+    Misalkan :
+
+        document.getElementById("demo").innerHTML =
+            "Hello Dolly!";
+
+        dari contoh diatas nampak enter terjadi setelah tanda "="
+
+<h1>JavaScript Variables</h1>
