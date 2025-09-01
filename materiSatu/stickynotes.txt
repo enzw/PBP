@@ -1,0 +1,114 @@
+<h1>JavaScript Output</h1>
+
+JavaScript bisa "Tampilin" data dengan banyak cara
+
+Misalkan :
+    1. Nulis ke elemen dalam HTML menggunakan innerHTML
+    2. Nulis ke output HTML menggunakan document.write()
+    3. Nulis ke alert box menggunakan window.alert()
+    4. Nulis ke console browser menggunakan console.log()
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+<h1>JavaScript Statement</h1>
+
+    1. Sebuah Statement tidak harus diakhiri dengan semicolon(;) jika
+    hanya 1 line
+
+    2. JS mengabaikan mutiple spaces
+
+    3. Blok program ditulis dalam {} (kurung kurawal)
+
+    4. jika ingin menulis statement dalam 2 baris maka penggal setelah operator
+
+    Misalkan :
+
+        document.getElementById("demo").innerHTML =
+            "Hello Dolly!";
+
+        dari contoh diatas nampak enter terjadi setelah tanda "="
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+<h1>JavaScript Variables</h1>
+    
+    var : variable jadul
+
+    let/const : variable terbaru, let untuk yang bisa di redeclare misal x = 4, kalau
+    const lebih ke sesuatu yang tetap misal phi = 3.14
+
+    Misalkan : 
+    x = 5
+    const pi = 3.14 (Constant declaration)
+    let x; (Declaration without assignment, x = undefined)
+    let y = 5; (Declaration as well as Assignment) 
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+<h1>JavaScript Datatype</h1>
+
+JS variable Datatype di spesifikasikan ketika assignment
+
+    Misalkan :
+
+    Tipe data Number : x = 34 atau y = 34.2 bisa make desimal atau gak tergantung assignment
+
+    String : bisa di concat dengan operasi "+", string biasa dihimpit dengan ", ', atau bahkan `
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+<h1>JavaScript Explisit casting atau merubah tipe data</h1>
+
+    int, integer "operasi" atau fungsi yang dilakukan untuk mengubah ke integer = parseInt()
+    bool, boolean = Boolean()
+    float, double, real = parseFloat()
+    string = String()
+    Array = split()
+
+    Misalkan : 
+        n = 3.14
+        x = parseInt(n)
+        document.write(x)
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+<h1>JavaScript Array</h1>
+
+Array biasa di declare dengan const
+
+Misalkan : const array = [enzo, saski, gwen, rona];
+
+walau menggunakan const, bukan berarti tidak bisa sama sekali dilakukan operasi
+
+Array tetap bisa di operasikan, misal di ubah elemen index tertentu, dimasukan elemen baru di index terakhir
+atau bahkan menghapus index terakhir
+
+    misal: 
+        fruits[0] = "lemon";       // Ubah elemen pertama
+        fruits.push("grape");      // Tambah elemen baru
+        fruits.pop();              // Hapus elemen terakhir
+
+
+Namun jelas karena dideclare dengan const maka tidak bisa di replace, 
+    
+    misal: array sebelumnya di assign dengan array baru
+
+        const array = ["enzo", "saski", "gwen", "rona"]; 
+
+        array = ["nadiva", "maysa", "anisa"];         // nah ini gabisa, assign array baru ke array di atasnya
+
+Index array dimulai dari 0 di JS, Jadi kalau mau mengakses elemen terakhir bisa dengan cara panjang array - 1
+
+    misal: console.log(array[array.lenght - 1]);
+
+Array selalu pakai index angka di JS, jadi kalau index diberikan nama maka akan menjadi objek
+
+    misal :
+        const array = ["enzo", "saski", "gwen", "rona"] = adalah sebuah array
+            cara akses indexnya dengan cara array[0]
+
+        const enzo = {nama: "Enzokulin"; usia: 21; pacar: "Gwen"} = adalah sebuah object
+            cara akses "index" nya dengan cara enzo.nama
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
