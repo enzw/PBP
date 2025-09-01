@@ -112,3 +112,28 @@ Array selalu pakai index angka di JS, jadi kalau index diberikan nama maka akan 
 
 `````````````````````````````````````````````````````````````````````````````````````````````````````````
 
+<h1>JavaScript Looping Array</h1>
+
+array bisa di akses indexnya dengan loop, misal
+
+    for(i = 0; i < array.lenght; i++){
+        document.write(array[i])
+    }
+
+atau bisa dengan foreach
+
+    array.forEach(function(x){
+            console.log(x);
+        }
+    );
+
+atau lebih lengkap bisa seperti ini
+
+    fruits.forEach(function(value, index, array) {
+    console.log("Index:", index, "→", value);
+    });
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+<h1>JavaScript Operations</h1>
+
