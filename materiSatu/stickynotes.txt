@@ -93,10 +93,22 @@ Namun jelas karena dideclare dengan const maka tidak bisa di replace,
     
     misal: array sebelumnya di assign dengan array baru
 
-        const array = [enzo, saski, gwen, rona]; 
+        const array = ["enzo", "saski", "gwen", "rona"]; 
 
-        array = [nadiva, maysa, anisa];         // nah ini gabisa, assign array baru ke array di atasnya
+        array = ["nadiva", "maysa", "anisa"];         // nah ini gabisa, assign array baru ke array di atasnya
 
 Index array dimulai dari 0 di JS, Jadi kalau mau mengakses elemen terakhir bisa dengan cara panjang array - 1
 
     misal: console.log(array[array.lenght - 1]);
+
+Array selalu pakai index angka di JS, jadi kalau index diberikan nama maka akan menjadi objek
+
+    misal :
+        const array = ["enzo", "saski", "gwen", "rona"] = adalah sebuah array
+            cara akses indexnya dengan cara array[0]
+
+        const enzo = {nama: "Enzokulin"; usia: 21; pacar: "Gwen"} = adalah sebuah object
+            cara akses "index" nya dengan cara enzo.nama
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
