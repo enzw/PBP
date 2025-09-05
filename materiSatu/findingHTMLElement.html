@@ -6,10 +6,51 @@
     <title>Finding HTML Element</title>
 </head>
 <body>
-    
+    <!-- By ID -->
+    <h2>Akses elemen menggunakan getElementById</h2>
+    <p id="content">Belajar Document Object Model</p>
+    <p id="demo1"></p>
 
     <script>
+        const elById = document.getElementById("content");
+        document.getElementById("demo1").innerHTML = "Isi Teks : " + elById.innerHTML;
+    </script>
 
+    <!-- By Tag -->
+    <h2>Akses Elemen menggunakan getElementsByTagName</h2>
+    <p>Belajar Javascript</p>
+    <p>Belajar Document Object Model</p>
+    <p id="demo2"></p>
+
+    <script>
+        const elByTag = document.getElementsByTagName("p");
+        document.getElementById("demo2").innerHTML = 
+            "Isi Teks [0]: " + elByTag[0].innerHTML + "<br>" +
+            "Isi Teks [1]: " + elByTag[1].innerHTML;
+    </script>
+
+    <!-- By Class Name -->
+    <h2>Akses elemen menggunakan getElementsByClassName</h2>
+    <p class="content">Belajar Javascript</p>
+    <p class="content">Belajar Document Object Model</p>
+    <p id="demo3"></p>
+
+    <script>
+        const elByClass = document.getElementsByClassName("content");
+        document.getElementById("demo3").innerHTML = 
+            "Isi Teks [0]: " + elByClass[0].innerHTML + "<br>" +
+            "Isi Teks [1]: " + elByClass[1].innerHTML;
+    </script>
+
+    <!-- By CSS Selector -->
+    <h2>Akses elemen menggunakan querySelectorAll</h2>
+    <p class="content">Belajar Javascript</p>
+    <p class="content">Belajar Document Object Model</p>
+    <p id="demo4"></p>    
+
+    <script>
+        const elBySelector = document.querySelectorAll("p.content");
+        document.getElementById("demo4").innerHTML = "Isi Teks [0]: " + elBySelector[0].innerHTML;
     </script>
 </body>
 </html>
