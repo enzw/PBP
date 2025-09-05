@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding HTML Object</title>
+</head>
+<body>
+  <h2>Demo Finding HTML Object</h2>
+
+  <!-- Contoh anchor -->
+  <a name="link1" href="#">Anchor 1</a><br>
+  <a name="link2" href="#">Anchor 2</a><br><br>
+
+  <!-- Contoh form -->
+  <form>
+    <input type="text" name="username" placeholder="Masukkan nama">
+  </form><br>
+
+  <!-- Contoh gambar -->
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGFUZn3stz_nAmo6k4hElWG2T_Oi1YelTjHw&s    " alt="gambar demo"><br><br>
+
+  <!-- Hasil akan ditampilkan di sini -->
+  <div id="output"></div>
+
+  <script>
+    let hasil = "";
+
+    hasil += "<b>document.anchors:</b> " + document.anchors.length + " anchor(s) ditemukan<br>";
+    hasil += "<b>document.body:</b> " + document.body.tagName + "<br>";
+    hasil += "<b>document.cookie:</b> " + document.cookie + "<br>";
+    hasil += "<b>document.forms:</b> " + document.forms.length + " form(s) ditemukan<br>";
+    hasil += "<b>document.head:</b> " + document.head.tagName + "<br>";
+    hasil += "<b>document.images:</b> " + document.images.length + " image(s) ditemukan<br>";
+    hasil += "<b>document.scripts:</b> " + document.scripts.length + " script(s) ditemukan<br>";
+    hasil += "<b>document.title:</b> " + document.title + "<br>";
+    hasil += "<b>document.URL:</b> " + document.URL + "<br>";
+
+    document.getElementById("output").innerHTML = hasil;
+  </script>
+</body>
+</html>
