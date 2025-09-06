@@ -135,5 +135,131 @@ atau lebih lengkap bisa seperti ini
 
 `````````````````````````````````````````````````````````````````````````````````````````````````````````
 
-<h1>JavaScript Operations</h1>
+<h1>JavaScript Node Type</h1>
+
+JavaScript menyediakan properti .nodeType untuk mengetahui tipe node.
+Nilainya berupa angka (constant) sesuai dengan jenis node.
+
+    Node Type	        Angka	    Contoh
+    ELEMENT_NODE	    1	        <div>, <p>, <h1>
+    ATTRIBUTE_NODE	    2	        class="title" (jarang dipakai langsung)
+    TEXT_NODE	        3	        isi teks dalam elemen: "Hello World"
+    COMMENT_NODE	    8	        <!-- ini komentar -->
+    DOCUMENT_NODE	    9	        document (root DOM)
+    DOCUMENT_TYPE_NODE	10	        <!DOCTYPE html>
+
+Untuk contoh:
+
+    <div id="contoh">Halo <b>Enzo</b></div>
+
+    console.log(elemen.nodeType);            // 1 (ELEMENT_NODE)
+    console.log(elemen.firstChild.nodeType); // 3 (TEXT_NODE: "Halo ")
+    console.log(elemen.lastChild.nodeType);  // 1 (ELEMENT_NODE: <b>)
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+<h1>JavaScript HTML DOM</h1>
+
+Apasih fungsi DOM?
+
+    DOM adalah acuan atau standart dalam mengakses, mengubah, menambah, dan menghapus elemen didalam HTML
+
+Setiap elemen HTML didefine sebagai objek alias memiliki properties dan methods
+
+Properti didalamnya memiliki value yang bisa di ambil atau diubah
+
+    Misalkan: 
+        document.getElementById("judul").innerHTML = "Halo Enzo!";
+
+Methods adalah aksi yang bisa di lakukan pada objek, misal mengubah atau menghapus elemen HTML
+
+    Misalkan: 
+        let p = document.createElement("p");    // buat <p>
+        document.body.appendChild(p);           // tambahkan ke body
+
+JS DOM bisa apa aja?
+
+1. JavaScript bisa mengubah elemen HTML
+
+    <p id="demo">Teks lama</p>
+
+    <script>
+    document.getElementById("demo").innerHTML = "Teks baru dari JS!";
+    </script>
+
+2. Mengubah atribut HTML
+
+    <img id="foto" src="lama.jpg">
+
+    <script>
+    document.getElementById("foto").src = "baru.jpg";
+    </script>
+
+3. Mengubah CSS style
+
+    <p id="styleme">Halo Enzo</p>
+
+    <script>
+    document.getElementById("styleme").style.color = "red";
+    document.getElementById("styleme").style.fontSize = "20px";
+    </script>
+
+4. Menghapus elemen / atribut
+
+    <p id="hapus">Ini akan dihapus</p>
+
+    <script>
+    document.getElementById("hapus").remove(); // hapus elemen remove() adalah fungsi bawaan JS
+    </script>
+
+5. Menambahkan elemen baru
+
+    <div id="container"></div>
+
+    <script>
+    let p = document.createElement("p");       // buat elemen <p>
+    p.innerHTML = "Paragraf baru";
+    document.getElementById("container").appendChild(p);
+    </script>
+
+6. Merespons event
+
+    <button id="klik">Klik aku</button>
+
+    <script>
+    document.getElementById("klik").onclick = function() {
+    alert("Tombol diklik!");
+    }
+    </script>
+
+7. Membuat event baru
+
+    <button id="btn">Klik aku</button>
+    <script>
+    let eventBaru = new Event("customEvent");
+
+    // pasang listener
+    document.getElementById("btn").addEventListener("customEvent", function() {
+    alert("Event custom dipicu!");
+    });
+
+    // jalankan event
+    document.getElementById("btn").dispatchEvent(eventBaru);
+    </script>
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+<h1>JavaScript Finding HTML Element</h1>
+
+Kita bisa mencari elemen dengan id, tag, class, css(querySelector), atau object
+    Misalkan : 
+        let judul = document.getElementById("header");
+        let paragraf = document.getElementsByTagName("p");
+        let items = document.getElementsByClassName("menu-item");
+        let pertama = document.querySelector(".menu li");           // elemen pertama li dalam .menu
+        let semua   = document.querySelectorAll(".menu li");        // semua li dalam .menu
+        document.body;    // seluruh <body>
+        document.forms;   // semua <form>
+        document.images;  // semua <img>
+        document.links;   // semua <a>
 

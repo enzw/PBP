@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form_mhs" action="">
+        Nama : <input type="text" name="nama" value="Saskia"><br>
+        kota Lahir : <input type="text" name="kota_lahir" value="Tangerang"><br>
+        Program Studi : <input type="text" name="prodi" value="Informatika"><br>
+        Fakultas : <input type="text" name="fakultas" value="FSM"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Isi setiap elemen form_mhs adalah sebagai berikut</p>
+    <p id="demo"></p>
+
+    <script>
+        const x = document.forms["form_mhs"];
+        let text = "";
+        for (let i = 0; i < x.length-1; i++){
+            text += x.elements[i].value + "<br/>"
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>
